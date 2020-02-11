@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  onuryilmaz
+
+  Created by Onur YILMAZ on 2/8/20.
+  Copyright © 2020 Onur YILMAZ. All rights reserved.
+*/
+
+"tabBarItemName0" = "Ana Sayfa";
+"tabBarItemName1" = "Diğer";
+
+"Please check your internet connection." = "Lütfen internet bağlantınızı kontrol edin.";
+"An error has occured." = "Bir hata oluştu.";

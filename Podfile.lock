@@ -1,0 +1,32 @@
+PODS:
+  - Alamofire (4.9.1)
+  - IQKeyboardManagerSwift (6.5.5)
+  - Localize-Swift (2.0.0)
+  - Parchment (1.7.0)
+  - SwiftyJSON (4.3.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - IQKeyboardManagerSwift
+  - Localize-Swift (~> 2.0)
+  - Parchment
+  - SwiftyJSON (~> 4.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - IQKeyboardManagerSwift
+    - Localize-Swift
+    - Parchment
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
+  Localize-Swift: c798ec9286494866f7068f85f7c71283ac5bdab4
+  Parchment: cae686f73685d16742cec9c19239b7578a15f0f5
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+
+PODFILE CHECKSUM: 96a3f5d3557b2332c71f3ac76dd82c0e401d5c43
+
+COCOAPODS: 1.8.4

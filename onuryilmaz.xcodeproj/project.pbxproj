@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		671A81F323EF351B00BC13DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A81F223EF351B00BC13DB /* AppDelegate.swift */; };
+		671A81F523EF351B00BC13DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A81F423EF351B00BC13DB /* SceneDelegate.swift */; };
+		671A81FC23EF352600BC13DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 671A81FB23EF352600BC13DB /* Assets.xcassets */; };
+		671DC78923EFF09000A321E1 /* OYCustomMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671DC78823EFF09000A321E1 /* OYCustomMessages.swift */; };
+		671DC78B23EFF23B00A321E1 /* OYHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671DC78A23EFF23B00A321E1 /* OYHelper.swift */; };
+		672C324F23F0538C0044E7CC /* OYSplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C324E23F0538C0044E7CC /* OYSplash.swift */; };
+		672C325023F057E50044E7CC /* EncodeSansCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 671DC78D23EFF30D00A321E1 /* EncodeSansCondensed-Regular.ttf */; };
+		672C325123F057EC0044E7CC /* EncodeSansCondensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 671DC78E23EFF30D00A321E1 /* EncodeSansCondensed-SemiBold.ttf */; };
+		672C325223F057EE0044E7CC /* EncodeSansCondensed-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 671DC78F23EFF30D00A321E1 /* EncodeSansCondensed-Thin.ttf */; };
+		672C325323F057F00044E7CC /* EncodeSansCondensed-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 671DC79023EFF30D00A321E1 /* EncodeSansCondensed-Black.ttf */; };
+		672C325423F057F50044E7CC /* EncodeSansCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 671DC79123EFF30D00A321E1 /* EncodeSansCondensed-Bold.ttf */; };
+		672C325523F057F80044E7CC /* EncodeSansCondensed-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 671DC79223EFF30D00A321E1 /* EncodeSansCondensed-Medium.ttf */; };
+		672C325623F057FB0044E7CC /* EncodeSansCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 671DC79323EFF30D00A321E1 /* EncodeSansCondensed-Light.ttf */; };
+		672C325723F057FE0044E7CC /* EncodeSansCondensed-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 671DC79423EFF30D00A321E1 /* EncodeSansCondensed-ExtraBold.ttf */; };
+		672C325823F058000044E7CC /* EncodeSansCondensed-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 671DC79523EFF30D00A321E1 /* EncodeSansCondensed-ExtraLight.ttf */; };
+		672C325A23F05F310044E7CC /* OYHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C325923F05F310044E7CC /* OYHome.swift */; };
+		672C325E23F05F770044E7CC /* OYHomeXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C325C23F05F770044E7CC /* OYHomeXib.swift */; };
+		672C325F23F05F770044E7CC /* OYHomeXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 672C325D23F05F770044E7CC /* OYHomeXib.xib */; };
+		678AC3F723F2FA15001560AC /* OYHomeBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678AC3F623F2FA15001560AC /* OYHomeBaseViewController.swift */; };
+		67E7B4B123EF3DD30017C2E4 /* OYBaseNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E7B4B023EF3DD30017C2E4 /* OYBaseNetworkManager.swift */; };
+		67E7B4B323EF3DED0017C2E4 /* OYNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E7B4B223EF3DED0017C2E4 /* OYNetworkManager.swift */; };
+		67E7B4B523EF3E020017C2E4 /* OYModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E7B4B423EF3E020017C2E4 /* OYModels.swift */; };
+		67E7B4B723EF3E380017C2E4 /* OYConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E7B4B623EF3E380017C2E4 /* OYConstants.swift */; };
+		67E7B4B923EF3E4F0017C2E4 /* OYConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E7B4B823EF3E4F0017C2E4 /* OYConfigs.swift */; };
+		67E7B4BB23EF3E870017C2E4 /* OYBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E7B4BA23EF3E870017C2E4 /* OYBaseViewController.swift */; };
+		67E7B4BE23EF41DD0017C2E4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 67E7B4C023EF41DD0017C2E4 /* Localizable.strings */; };
+		67F2BF5623EF399600672DA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67F2BF5223EF397C00672DA4 /* Main.storyboard */; };
+		67F2BF5723EF399B00672DA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67F2BF5423EF397C00672DA4 /* LaunchScreen.storyboard */; };
+		F9584D9CCB2604E65CFAF695 /* Pods_onuryilmaz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EA30E682539A5B61AC69CDF /* Pods_onuryilmaz.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1EA30E682539A5B61AC69CDF /* Pods_onuryilmaz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_onuryilmaz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34DE0F9697FD6E06D03EC438 /* Pods-onuryilmaz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onuryilmaz.release.xcconfig"; path = "Target Support Files/Pods-onuryilmaz/Pods-onuryilmaz.release.xcconfig"; sourceTree = "<group>"; };
+		671A81EF23EF351A00BC13DB /* onuryilmaz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = onuryilmaz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		671A81F223EF351B00BC13DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
+		671A81F423EF351B00BC13DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../SceneDelegate.swift; sourceTree = "<group>"; };
+		671A81FB23EF352600BC13DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		671A820023EF352600BC13DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		671DC78823EFF09000A321E1 /* OYCustomMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OYCustomMessages.swift; sourceTree = "<group>"; };
+		671DC78A23EFF23B00A321E1 /* OYHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OYHelper.swift; sourceTree = "<group>"; };
+		671DC78D23EFF30D00A321E1 /* EncodeSansCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EncodeSansCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		671DC78E23EFF30D00A321E1 /* EncodeSansCondensed-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EncodeSansCondensed-SemiBold.ttf"; sourceTree = "<group>"; };
+		671DC78F23EFF30D00A321E1 /* EncodeSansCondensed-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EncodeSansCondensed-Thin.ttf"; sourceTree = "<group>"; };
+		671DC79023EFF30D00A321E1 /* EncodeSansCondensed-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EncodeSansCondensed-Black.ttf"; sourceTree = "<group>"; };
+		671DC79123EFF30D00A321E1 /* EncodeSansCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EncodeSansCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		671DC79223EFF30D00A321E1 /* EncodeSansCondensed-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EncodeSansCondensed-Medium.ttf"; sourceTree = "<group>"; };
+		671DC79323EFF30D00A321E1 /* EncodeSansCondensed-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EncodeSansCondensed-Light.ttf"; sourceTree = "<group>"; };
+		671DC79423EFF30D00A321E1 /* EncodeSansCondensed-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EncodeSansCondensed-ExtraBold.ttf"; sourceTree = "<group>"; };
+		671DC79523EFF30D00A321E1 /* EncodeSansCondensed-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EncodeSansCondensed-ExtraLight.ttf"; sourceTree = "<group>"; };
+		672439ED23EF42810096AABE /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		672C324E23F0538C0044E7CC /* OYSplash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OYSplash.swift; sourceTree = "<group>"; };
+		672C325923F05F310044E7CC /* OYHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OYHome.swift; sourceTree = "<group>"; };
+		672C325C23F05F770044E7CC /* OYHomeXib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OYHomeXib.swift; sourceTree = "<group>"; };
+		672C325D23F05F770044E7CC /* OYHomeXib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OYHomeXib.xib; sourceTree = "<group>"; };
+		678AC3F623F2FA15001560AC /* OYHomeBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OYHomeBaseViewController.swift; sourceTree = "<group>"; };
+		67E7B4B023EF3DD30017C2E4 /* OYBaseNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OYBaseNetworkManager.swift; sourceTree = "<group>"; };
+		67E7B4B223EF3DED0017C2E4 /* OYNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OYNetworkManager.swift; sourceTree = "<group>"; };
+		67E7B4B423EF3E020017C2E4 /* OYModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OYModels.swift; sourceTree = "<group>"; };
+		67E7B4B623EF3E380017C2E4 /* OYConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OYConstants.swift; sourceTree = "<group>"; };
+		67E7B4B823EF3E4F0017C2E4 /* OYConfigs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OYConfigs.swift; sourceTree = "<group>"; };
+		67E7B4BA23EF3E870017C2E4 /* OYBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OYBaseViewController.swift; sourceTree = "<group>"; };
+		67E7B4BF23EF41DD0017C2E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		67F2BF5323EF397C00672DA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		67F2BF5523EF397C00672DA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AF6D14C92EB55086DFFE48CA /* Pods-onuryilmaz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onuryilmaz.debug.xcconfig"; path = "Target Support Files/Pods-onuryilmaz/Pods-onuryilmaz.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		671A81EC23EF351A00BC13DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9584D9CCB2604E65CFAF695 /* Pods_onuryilmaz.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		671A81E623EF351A00BC13DB = {
+			isa = PBXGroup;
+			children = (
+				671A81F123EF351A00BC13DB /* onuryilmaz */,
+				671A81F023EF351A00BC13DB /* Products */,
+				6C7CB17DFC46AC58035F4296 /* Pods */,
+				6C987D00FDF601C3E5DEAF97 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		671A81F023EF351A00BC13DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				671A81EF23EF351A00BC13DB /* onuryilmaz.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		671A81F123EF351A00BC13DB /* onuryilmaz */ = {
+			isa = PBXGroup;
+			children = (
+				67E7B4AD23EF3D440017C2E4 /* Base */,
+				67E7B4AC23EF3D360017C2E4 /* NetworkManagers */,
+				67E7B4AB23EF3D2D0017C2E4 /* Helpers */,
+				67E7B4AA23EF3D1F0017C2E4 /* ViewControllers */,
+				671A820623EF368E00BC13DB /* Resources */,
+			);
+			path = onuryilmaz;
+			sourceTree = "<group>";
+		};
+		671A820623EF368E00BC13DB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				67E7B4C023EF41DD0017C2E4 /* Localizable.strings */,
+				67F2BF5223EF397C00672DA4 /* Main.storyboard */,
+				67F2BF5423EF397C00672DA4 /* LaunchScreen.storyboard */,
+				671A81FB23EF352600BC13DB /* Assets.xcassets */,
+				671A820023EF352600BC13DB /* Info.plist */,
+				671DC78C23EFF30D00A321E1 /* FontFilesEncodeSansCondensed */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		671DC78C23EFF30D00A321E1 /* FontFilesEncodeSansCondensed */ = {
+			isa = PBXGroup;
+			children = (
+				671DC78D23EFF30D00A321E1 /* EncodeSansCondensed-Regular.ttf */,
+				671DC78E23EFF30D00A321E1 /* EncodeSansCondensed-SemiBold.ttf */,
+				671DC78F23EFF30D00A321E1 /* EncodeSansCondensed-Thin.ttf */,
+				671DC79023EFF30D00A321E1 /* EncodeSansCondensed-Black.ttf */,
+				671DC79123EFF30D00A321E1 /* EncodeSansCondensed-Bold.ttf */,
+				671DC79223EFF30D00A321E1 /* EncodeSansCondensed-Medium.ttf */,
+				671DC79323EFF30D00A321E1 /* EncodeSansCondensed-Light.ttf */,
+				671DC79423EFF30D00A321E1 /* EncodeSansCondensed-ExtraBold.ttf */,
+				671DC79523EFF30D00A321E1 /* EncodeSansCondensed-ExtraLight.ttf */,
+			);
+			path = FontFilesEncodeSansCondensed;
+			sourceTree = "<group>";
+		};
+		678AC3F823F31486001560AC /* HomeXibs */ = {
+			isa = PBXGroup;
+			children = (
+				672C325C23F05F770044E7CC /* OYHomeXib.swift */,
+				672C325D23F05F770044E7CC /* OYHomeXib.xib */,
+			);
+			path = HomeXibs;
+			sourceTree = "<group>";
+		};
+		67E7B4AA23EF3D1F0017C2E4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				67E7B4AE23EF3D750017C2E4 /* Home */,
+				67E7B4AF23EF3D7D0017C2E4 /* Other */,
+				672C324E23F0538C0044E7CC /* OYSplash.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		67E7B4AB23EF3D2D0017C2E4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				671DC78A23EFF23B00A321E1 /* OYHelper.swift */,
+				671DC78823EFF09000A321E1 /* OYCustomMessages.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		67E7B4AC23EF3D360017C2E4 /* NetworkManagers */ = {
+			isa = PBXGroup;
+			children = (
+				67E7B4B023EF3DD30017C2E4 /* OYBaseNetworkManager.swift */,
+				67E7B4B223EF3DED0017C2E4 /* OYNetworkManager.swift */,
+				67E7B4B423EF3E020017C2E4 /* OYModels.swift */,
+			);
+			path = NetworkManagers;
+			sourceTree = "<group>";
+		};
+		67E7B4AD23EF3D440017C2E4 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				671A81F223EF351B00BC13DB /* AppDelegate.swift */,
+				671A81F423EF351B00BC13DB /* SceneDelegate.swift */,
+				67E7B4B623EF3E380017C2E4 /* OYConstants.swift */,
+				67E7B4B823EF3E4F0017C2E4 /* OYConfigs.swift */,
+				67E7B4BA23EF3E870017C2E4 /* OYBaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		67E7B4AE23EF3D750017C2E4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				678AC3F623F2FA15001560AC /* OYHomeBaseViewController.swift */,
+				672C325923F05F310044E7CC /* OYHome.swift */,
+				678AC3F823F31486001560AC /* HomeXibs */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		67E7B4AF23EF3D7D0017C2E4 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		6C7CB17DFC46AC58035F4296 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF6D14C92EB55086DFFE48CA /* Pods-onuryilmaz.debug.xcconfig */,
+				34DE0F9697FD6E06D03EC438 /* Pods-onuryilmaz.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6C987D00FDF601C3E5DEAF97 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1EA30E682539A5B61AC69CDF /* Pods_onuryilmaz.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		671A81EE23EF351A00BC13DB /* onuryilmaz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 671A820323EF352600BC13DB /* Build configuration list for PBXNativeTarget "onuryilmaz" */;
+			buildPhases = (
+				D6726A6F52622DCA13C6179E /* [CP] Check Pods Manifest.lock */,
+				671A81EB23EF351A00BC13DB /* Sources */,
+				671A81EC23EF351A00BC13DB /* Frameworks */,
+				671A81ED23EF351A00BC13DB /* Resources */,
+				FB98C5CE04A5C7EA23A31CAD /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = onuryilmaz;
+			productName = onuryilmaz;
+			productReference = 671A81EF23EF351A00BC13DB /* onuryilmaz.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		671A81E723EF351A00BC13DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Onur YILMAZ";
+				TargetAttributes = {
+					671A81EE23EF351A00BC13DB = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 671A81EA23EF351A00BC13DB /* Build configuration list for PBXProject "onuryilmaz" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				tr,
+			);
+			mainGroup = 671A81E623EF351A00BC13DB;
+			productRefGroup = 671A81F023EF351A00BC13DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				671A81EE23EF351A00BC13DB /* onuryilmaz */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		671A81ED23EF351A00BC13DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				672C325223F057EE0044E7CC /* EncodeSansCondensed-Thin.ttf in Resources */,
+				672C325323F057F00044E7CC /* EncodeSansCondensed-Black.ttf in Resources */,
+				672C325623F057FB0044E7CC /* EncodeSansCondensed-Light.ttf in Resources */,
+				672C325723F057FE0044E7CC /* EncodeSansCondensed-ExtraBold.ttf in Resources */,
+				67F2BF5723EF399B00672DA4 /* LaunchScreen.storyboard in Resources */,
+				672C325423F057F50044E7CC /* EncodeSansCondensed-Bold.ttf in Resources */,
+				672C325523F057F80044E7CC /* EncodeSansCondensed-Medium.ttf in Resources */,
+				67E7B4BE23EF41DD0017C2E4 /* Localizable.strings in Resources */,
+				672C325123F057EC0044E7CC /* EncodeSansCondensed-SemiBold.ttf in Resources */,
+				672C325023F057E50044E7CC /* EncodeSansCondensed-Regular.ttf in Resources */,
+				672C325F23F05F770044E7CC /* OYHomeXib.xib in Resources */,
+				67F2BF5623EF399600672DA4 /* Main.storyboard in Resources */,
+				671A81FC23EF352600BC13DB /* Assets.xcassets in Resources */,
+				672C325823F058000044E7CC /* EncodeSansCondensed-ExtraLight.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D6726A6F52622DCA13C6179E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-onuryilmaz-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB98C5CE04A5C7EA23A31CAD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-onuryilmaz/Pods-onuryilmaz-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-onuryilmaz/Pods-onuryilmaz-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-onuryilmaz/Pods-onuryilmaz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		671A81EB23EF351A00BC13DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				672C324F23F0538C0044E7CC /* OYSplash.swift in Sources */,
+				678AC3F723F2FA15001560AC /* OYHomeBaseViewController.swift in Sources */,
+				67E7B4B323EF3DED0017C2E4 /* OYNetworkManager.swift in Sources */,
+				672C325A23F05F310044E7CC /* OYHome.swift in Sources */,
+				67E7B4B123EF3DD30017C2E4 /* OYBaseNetworkManager.swift in Sources */,
+				67E7B4B923EF3E4F0017C2E4 /* OYConfigs.swift in Sources */,
+				671DC78923EFF09000A321E1 /* OYCustomMessages.swift in Sources */,
+				671DC78B23EFF23B00A321E1 /* OYHelper.swift in Sources */,
+				67E7B4BB23EF3E870017C2E4 /* OYBaseViewController.swift in Sources */,
+				671A81F323EF351B00BC13DB /* AppDelegate.swift in Sources */,
+				67E7B4B523EF3E020017C2E4 /* OYModels.swift in Sources */,
+				671A81F523EF351B00BC13DB /* SceneDelegate.swift in Sources */,
+				672C325E23F05F770044E7CC /* OYHomeXib.swift in Sources */,
+				67E7B4B723EF3E380017C2E4 /* OYConstants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		67E7B4C023EF41DD0017C2E4 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67E7B4BF23EF41DD0017C2E4 /* en */,
+				672439ED23EF42810096AABE /* tr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		67F2BF5223EF397C00672DA4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67F2BF5323EF397C00672DA4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		67F2BF5423EF397C00672DA4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67F2BF5523EF397C00672DA4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		671A820123EF352600BC13DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		671A820223EF352600BC13DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		671A820423EF352600BC13DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF6D14C92EB55086DFFE48CA /* Pods-onuryilmaz.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3EW38CK8VL;
+				INFOPLIST_FILE = "$(SRCROOT)/onuryilmaz/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ozel.onuryilmaz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		671A820523EF352600BC13DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34DE0F9697FD6E06D03EC438 /* Pods-onuryilmaz.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3EW38CK8VL;
+				INFOPLIST_FILE = "$(SRCROOT)/onuryilmaz/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ozel.onuryilmaz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		671A81EA23EF351A00BC13DB /* Build configuration list for PBXProject "onuryilmaz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				671A820123EF352600BC13DB /* Debug */,
+				671A820223EF352600BC13DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		671A820323EF352600BC13DB /* Build configuration list for PBXNativeTarget "onuryilmaz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				671A820423EF352600BC13DB /* Debug */,
+				671A820523EF352600BC13DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 671A81E723EF351A00BC13DB /* Project object */;
+}
