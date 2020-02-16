@@ -10,14 +10,29 @@ import UIKit
 
 class OYHomeXib: UITableViewCell {
     
-    @IBOutlet weak var lblWeather: UILabel!
-    @IBOutlet weak var lblCity: UILabel!
-    @IBOutlet weak var lblDesc: UILabel!
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var lblCity: UILabel!{
+        didSet{
+            lblCity.font = UIFont.customFont(size: 16, customStyle: .Semibold)
+            lblCity.textColor = UIColor.customColorBlack
+        }
     }
+    @IBOutlet weak var lblWeather: UILabel!{
+        didSet{
+            lblWeather.font = UIFont.customFont(size: 16, customStyle: .Medium)
+            lblWeather.textColor = UIColor.customColorBlack
+        }
+    }
+    @IBOutlet weak var lblDesc: UILabel!{
+        didSet{
+            lblDesc.font = UIFont.customFont(size: 16, customStyle: .Bold)
+            lblDesc.textColor = UIColor.customColorBlack
+        }
+    }
+
+//    override func awakeFromNib() {
+//        super.awakeFromNib()
+//
+//    }
     
     func setWeather(weatherArray: OYModels.WeatherArray){
         self.lblWeather.text = weatherArray.date

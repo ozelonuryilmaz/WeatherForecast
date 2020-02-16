@@ -9,6 +9,8 @@
 "tabBarItemName0" = "Ana Sayfa";
 "tabBarItemName1" = "Diğer";
 
+"Home" = "Ana Sayfa";
+"Other" = "Diğer";
 "Please check your internet connection." = "Lütfen internet bağlantınızı kontrol edin.";
 "An error has occured." = "Bir hata oluştu.";
 "Weather Forecast" = "Hava Durumu";

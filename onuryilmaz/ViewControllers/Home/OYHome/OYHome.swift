@@ -36,7 +36,9 @@ class OYHome: OYHomeBaseViewController {
         
         self.getWeather(city: "istanbul", key: OYConstants.WEATHER_KEY, success: { (response) in
             
-            response == true ? self.tableViewWeather.reloadData() : OYCustomMessages.shared.long(self.view, txt_msg: "An error has occured.".localized())
+            response
+                ? self.tableViewWeather.reloadData()
+                : OYCustomMessages.shared.long(self.view, txt_msg: "An error has occured.".localized())
             
         })
         
@@ -67,6 +69,18 @@ extension OYHome: UITableViewDataSource, UITableViewDelegate {
         cell.selectionStyle = .none
         return cell
         
+    }
+    
+    func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+        if let cell = tableViewWeather.cellForRow(at: indexPath){
+            cell.contentView.backgroundColor = .customColorGrey
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
+        if let cell = tableViewWeather.cellForRow(at: indexPath){
+            cell.contentView.backgroundColor = .clear
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

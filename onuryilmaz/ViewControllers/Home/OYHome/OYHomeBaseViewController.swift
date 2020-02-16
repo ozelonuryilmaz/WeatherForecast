@@ -98,7 +98,7 @@ class OYHomeBaseViewController: OYBaseViewController {
             self.hideProgressView()
             
         }) { (Error, statusCode) in
-                self.hideProgressView()
+            self.hideProgressView()
         }
 
     }
