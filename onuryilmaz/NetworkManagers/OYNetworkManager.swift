@@ -37,10 +37,12 @@ class OYNetworkManager: NSObject {
     
     class func forecast(city: String, key: String, success:@escaping (_ response: OYModels.MainModel) -> Void, failure:@escaping (_ error:Error , _ statusCode:Int) -> Void) -> Void {
         
+        let url = OYConstants.Url.DATA + "2.5/forecast"
+        
         let parametre = ["q": city,
                          "appid": key]
         
-        var forecastURL = URLComponents(string: OYConstants.Url.FORECAST)
+        var forecastURL = URLComponents(string: url)
         var items = [URLQueryItem]()
         
         for (key,value) in parametre {
@@ -62,12 +64,12 @@ class OYNetworkManager: NSObject {
             } catch let error {
                 print(error)
                 failure(error, -1)
-                printAndShowError(url: OYConstants.Url.FORECAST, error: error, statusCode: -1)
+                printAndShowError(url: url, error: error, statusCode: -1)
             }
 
         }) { (Error, statusCode) in
             failure(Error, statusCode)
-            printAndShowError(url: OYConstants.Url.FORECAST, error: Error, statusCode: statusCode)
+            printAndShowError(url: url, error: Error, statusCode: statusCode)
         }
     }
 

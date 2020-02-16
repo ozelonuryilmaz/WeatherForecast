@@ -12,30 +12,24 @@ class OYConstants: NSObject {
     
     // MARK: *** Endpoints Constants
     private struct Domains{
-        
         static let development = OYConfigs.developmentDomain
         static let production = OYConfigs.applicationDomain
         
-        static let active = production
-        
-    }
-    
-    struct Routes {
-        static let API = "/data/"
+        static let ACTIVE = production
     }
     
     struct Url {
-        static let FORECAST =  Domains.active + Routes.API + "2.5/forecast?"
+        static let DATA = OYConstants.Domains.ACTIVE + "/data/"
+    }
+    
+    struct UserDefaults {
+        static let APP_SELECTED_LANG = "applicationSelectedLanguage"
+    }
+    
+    struct NotificationName {
+        static let REFRESH_HOMEPAGE = "refreshHomepage"
     }
     
     static let WEATHER_KEY = "f9fed13dff94cb5bac5035610420addc"
     
-    struct UserDefaults {
-        
-        static let APP_SELECTED_LANG = "applicationSelectedLanguage"
-        
-    }
-    
-    
-
 }
