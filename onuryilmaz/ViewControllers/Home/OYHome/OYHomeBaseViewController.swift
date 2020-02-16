@@ -60,7 +60,7 @@ class OYHomeBaseViewController: OYBaseViewController {
         
     }
     
-    func getWeather(city: String, key: String, success:@escaping (_ response: Bool) -> Void, failure:@escaping (_ error:Error , _ statusCode:Int) -> Void) -> Void {
+    func getWeather(city: String, key: String, success:@escaping (_ response: Bool) -> Void) -> Void {
         
         self.showProgressView()
         
@@ -70,23 +70,26 @@ class OYHomeBaseViewController: OYBaseViewController {
                 
                 self.weatherArray.removeAll()
                 
-                for addiction in response.list!{
-                    
-                    if let weathers = addiction.weather{
-                        for addictionList in weathers{
-                            
-                            if let desc = addictionList.description,
-                                let timestamp = addiction.dt{
+                if let list = response.list{
+                    for addiction in list{
+                        
+                        if let weathers = addiction.weather{
+                            for addictionList in weathers{
                                 
-                                let result = OYModels.WeatherArray(date: OYHelper.convertTimestamp(timestamp: timestamp), city: city, description: desc)
-                                self.weatherArray.append(result)
+                                if let desc = addictionList.description,
+                                    let timestamp = addiction.dt{
+                                    
+                                    let result = OYModels.WeatherArray(date: OYHelper.convertTimestamp(timestamp: timestamp), city: city, description: desc)
+                                    self.weatherArray.append(result)
+                                    
+                                }
                                 
                             }
-                            
                         }
+                        
                     }
-                    
                 }
+                
                 success(true)
             }else {
                 success(false)
@@ -94,10 +97,10 @@ class OYHomeBaseViewController: OYBaseViewController {
             
             self.hideProgressView()
             
-        }) { (error, statusCode) in
-            self.hideProgressView()
-            failure(error, -1)
+        }) { (Error, statusCode) in
+                self.hideProgressView()
         }
+
     }
 
 }

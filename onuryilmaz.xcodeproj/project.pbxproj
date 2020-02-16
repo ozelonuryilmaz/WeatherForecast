@@ -12,6 +12,9 @@
 		671A81FC23EF352600BC13DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 671A81FB23EF352600BC13DB /* Assets.xcassets */; };
 		671DC78923EFF09000A321E1 /* OYCustomMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671DC78823EFF09000A321E1 /* OYCustomMessages.swift */; };
 		671DC78B23EFF23B00A321E1 /* OYHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671DC78A23EFF23B00A321E1 /* OYHelper.swift */; };
+		6720273523F94FCB0038AFFF /* OYHomeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6720273423F94FCB0038AFFF /* OYHomeDetail.swift */; };
+		6720273823F950DC0038AFFF /* OYOther.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6720273723F950DC0038AFFF /* OYOther.swift */; };
+		6720273A23F9514A0038AFFF /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6720273923F9514A0038AFFF /* Home.storyboard */; };
 		672C324F23F0538C0044E7CC /* OYSplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C324E23F0538C0044E7CC /* OYSplash.swift */; };
 		672C325023F057E50044E7CC /* EncodeSansCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 671DC78D23EFF30D00A321E1 /* EncodeSansCondensed-Regular.ttf */; };
 		672C325123F057EC0044E7CC /* EncodeSansCondensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 671DC78E23EFF30D00A321E1 /* EncodeSansCondensed-SemiBold.ttf */; };
@@ -57,6 +60,9 @@
 		671DC79323EFF30D00A321E1 /* EncodeSansCondensed-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EncodeSansCondensed-Light.ttf"; sourceTree = "<group>"; };
 		671DC79423EFF30D00A321E1 /* EncodeSansCondensed-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EncodeSansCondensed-ExtraBold.ttf"; sourceTree = "<group>"; };
 		671DC79523EFF30D00A321E1 /* EncodeSansCondensed-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EncodeSansCondensed-ExtraLight.ttf"; sourceTree = "<group>"; };
+		6720273423F94FCB0038AFFF /* OYHomeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OYHomeDetail.swift; sourceTree = "<group>"; };
+		6720273723F950DC0038AFFF /* OYOther.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OYOther.swift; sourceTree = "<group>"; };
+		6720273923F9514A0038AFFF /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		672439ED23EF42810096AABE /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		672C324E23F0538C0044E7CC /* OYSplash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OYSplash.swift; sourceTree = "<group>"; };
 		672C325923F05F310044E7CC /* OYHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OYHome.swift; sourceTree = "<group>"; };
@@ -120,9 +126,8 @@
 		671A820623EF368E00BC13DB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6720274023F956900038AFFF /* Storyboards */,
 				67E7B4C023EF41DD0017C2E4 /* Localizable.strings */,
-				67F2BF5223EF397C00672DA4 /* Main.storyboard */,
-				67F2BF5423EF397C00672DA4 /* LaunchScreen.storyboard */,
 				671A81FB23EF352600BC13DB /* Assets.xcassets */,
 				671A820023EF352600BC13DB /* Info.plist */,
 				671DC78C23EFF30D00A321E1 /* FontFilesEncodeSansCondensed */,
@@ -146,13 +151,41 @@
 			path = FontFilesEncodeSansCondensed;
 			sourceTree = "<group>";
 		};
-		678AC3F823F31486001560AC /* HomeXibs */ = {
+		6720273223F94EFD0038AFFF /* OYHome */ = {
 			isa = PBXGroup;
 			children = (
+				672C325923F05F310044E7CC /* OYHome.swift */,
+				678AC3F623F2FA15001560AC /* OYHomeBaseViewController.swift */,
 				672C325C23F05F770044E7CC /* OYHomeXib.swift */,
 				672C325D23F05F770044E7CC /* OYHomeXib.xib */,
 			);
-			path = HomeXibs;
+			path = OYHome;
+			sourceTree = "<group>";
+		};
+		6720273323F94F200038AFFF /* OYHomeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				6720273423F94FCB0038AFFF /* OYHomeDetail.swift */,
+			);
+			path = OYHomeDetail;
+			sourceTree = "<group>";
+		};
+		6720273623F950C90038AFFF /* OYOther */ = {
+			isa = PBXGroup;
+			children = (
+				6720273723F950DC0038AFFF /* OYOther.swift */,
+			);
+			path = OYOther;
+			sourceTree = "<group>";
+		};
+		6720274023F956900038AFFF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				67F2BF5223EF397C00672DA4 /* Main.storyboard */,
+				6720273923F9514A0038AFFF /* Home.storyboard */,
+				67F2BF5423EF397C00672DA4 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		67E7B4AA23EF3D1F0017C2E4 /* ViewControllers */ = {
@@ -199,9 +232,8 @@
 		67E7B4AE23EF3D750017C2E4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				678AC3F623F2FA15001560AC /* OYHomeBaseViewController.swift */,
-				672C325923F05F310044E7CC /* OYHome.swift */,
-				678AC3F823F31486001560AC /* HomeXibs */,
+				6720273223F94EFD0038AFFF /* OYHome */,
+				6720273323F94F200038AFFF /* OYHomeDetail */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -209,6 +241,7 @@
 		67E7B4AF23EF3D7D0017C2E4 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				6720273623F950C90038AFFF /* OYOther */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -297,6 +330,7 @@
 				672C325723F057FE0044E7CC /* EncodeSansCondensed-ExtraBold.ttf in Resources */,
 				67F2BF5723EF399B00672DA4 /* LaunchScreen.storyboard in Resources */,
 				672C325423F057F50044E7CC /* EncodeSansCondensed-Bold.ttf in Resources */,
+				6720273A23F9514A0038AFFF /* Home.storyboard in Resources */,
 				672C325523F057F80044E7CC /* EncodeSansCondensed-Medium.ttf in Resources */,
 				67E7B4BE23EF41DD0017C2E4 /* Localizable.strings in Resources */,
 				672C325123F057EC0044E7CC /* EncodeSansCondensed-SemiBold.ttf in Resources */,
@@ -358,6 +392,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				672C324F23F0538C0044E7CC /* OYSplash.swift in Sources */,
+				6720273523F94FCB0038AFFF /* OYHomeDetail.swift in Sources */,
+				6720273823F950DC0038AFFF /* OYOther.swift in Sources */,
 				678AC3F723F2FA15001560AC /* OYHomeBaseViewController.swift in Sources */,
 				67E7B4B323EF3DED0017C2E4 /* OYNetworkManager.swift in Sources */,
 				672C325A23F05F310044E7CC /* OYHome.swift in Sources */,

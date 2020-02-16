@@ -14,6 +14,7 @@ class OYHome: OYHomeBaseViewController {
         super.viewDidLoad()
         
         self.setupViewComponents()
+        
         self.btnSearch.addTarget(self, action: #selector(tapBtnSearch(sender:)), for: .touchUpInside)
         
         self.tableViewWeather.delegate = self
@@ -37,11 +38,10 @@ class OYHome: OYHomeBaseViewController {
             
             response == true ? self.tableViewWeather.reloadData() : OYCustomMessages.shared.long(self.view, txt_msg: "An error has occured.".localized())
             
-        }) { (error, statusCode) in
-            OYCustomMessages.shared.long(self.view, txt_msg: "\(error)")
-        }
+        })
         
     }
+    
     
     // MARK: *** Button Tap Actions
     @IBAction func tapBtnSearch(sender: UIButton) {
@@ -69,10 +69,23 @@ extension OYHome: UITableViewDataSource, UITableViewDelegate {
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let homeView: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
+        let weather = homeView.instantiateViewController(withIdentifier: "homeDetail") as! OYHomeDetail
+        weather.weatherForecast = self.weatherArray[indexPath.row].description
+        self.navigationController?.pushViewController(weather, animated: true)
+        
+    }
+    
 }
 
 
 
+
+
+
+//MARK: *** Without using Alamofire
 //func getWeather(){
 //
 //    let session = URLSession(configuration: .default)
@@ -98,24 +111,28 @@ extension OYHome: UITableViewDataSource, UITableViewDelegate {
 //
 //                do {
 //                    let res = try JSONDecoder().decode(MainModel.self, from: data)
-//                    for addiction in res.list!{
 //
-//                        if let weathers = addiction.weather{
-//                            for addictionList in weathers{
+//                    if let list = res.list{
+//                        for addiction in list{
 //
-//                                if let desc = addictionList.description,
-//                                    let timestamp = addiction.dt{
-//                                    let result = CustomArray(date: self.createDateTime(timestamp: timestamp), city: myCity, description: desc)
-//                                    self.arrayWeather.append(result)
-//                                    DispatchQueue.main.async {
-//                                        self.tableView.reloadData()
+//                            if let weathers = addiction.weather{
+//                                for addictionList in weathers{
+//
+//                                    if let desc = addictionList.description,
+//                                        let timestamp = addiction.dt{
+//                                        let result = CustomArray(date: self.createDateTime(timestamp: timestamp), city: myCity, description: desc)
+//                                        self.arrayWeather.append(result)
 //                                    }
+//
 //                                }
-//
 //                            }
-//                        }
 //
+//                        }
+//                        DispatchQueue.main.async {
+//                            self.tableView.reloadData()
+//                        }
 //                    }
+//
 //                } catch let error{
 //                    print(error)
 //                }
@@ -127,3 +144,7 @@ extension OYHome: UITableViewDataSource, UITableViewDelegate {
 //    dataTask?.resume()
 //
 //}
+
+
+
+

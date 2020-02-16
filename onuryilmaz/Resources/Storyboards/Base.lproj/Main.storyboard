@@ -43,7 +43,7 @@
         <!--Item 2-->
         <scene sceneID="w2W-6i-487">
             <objects>
-                <viewController id="eMY-Lq-3cF" sceneMemberID="viewController">
+                <viewController id="eMY-Lq-3cF" customClass="OYOther" customModule="onuryilmaz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4SU-de-d0Y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,6 +90,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2aJ-jK-LnC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1277" y="-261"/>
+        </scene>
+        <!--OYHomeDetail-->
+        <scene sceneID="Vf4-Ib-Mgl">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="OYHomeDetail" id="Biq-WR-CbP" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="VTk-rg-dmE"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v16-Gm-F2i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1925" y="-261"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="uX9-gX-iok">
