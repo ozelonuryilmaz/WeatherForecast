@@ -13,13 +13,13 @@ class OYHelper: NSObject {
     // MARK: *** Setup TabBar Controller
     class func setupTabBarControler(tabBarController: UITabBarController) {
         
+        tabBarController.tabBar.unselectedItemTintColor = UIColor.customColorBlack
         tabBarController.tabBar.tintColor = UIColor.primaryColor
         tabBarController.tabBar.barTintColor = UIColor.secondaryColor
-        tabBarController.tabBar.unselectedItemTintColor = UIColor.customColorBlack
         
         for i in 0 ..< OYConfigs.applicationTabBarCount  {
             let tabBarItem = UITabBarItem.init(title: "tabBarItemName\(i)".localized(), image: UIImage.init(named: "tabBarIcon\(i)"), tag: i)
-            tabBarItem.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.customFont(size: 13, customStyle: .Regular)!], for: .normal)
+            tabBarItem.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.customFont(size: 14, customStyle: .Medium)!], for: .normal)
             tabBarController.viewControllers![i].tabBarItem = tabBarItem
         }
     }
@@ -55,28 +55,28 @@ extension UIViewController {
 // MARK: *** Shake Label
 extension UILabel {
     func shake() {
-        let animation = CABasicAnimation(keyPath: "position")
-        animation.duration = 0.05
-        animation.repeatCount = 5
-        animation.autoreverses = true
-        animation.fromValue = CGPoint(x: self.center.x - 4.0, y: self.center.y)
-        animation.toValue = CGPoint(x: self.center.x + 4.0, y: self.center.y)
-        layer.add(animation, forKey: "position")
+        let anim = CABasicAnimation(keyPath: "state")
+        anim.autoreverses = true
+        anim.duration = 0.06
+        anim.repeatCount = 6
+        anim.fromValue = CGPoint(x: self.center.x - 4.5, y: self.center.y)
+        anim.toValue = CGPoint(x: self.center.x + 4.5, y: self.center.y)
+        layer.add(anim, forKey: "state")
     }
 }
 
 // MARK: *** Calculate Label Height or Width String Extension
 extension String {
     func height(withConstrainedWidth width: CGFloat, font: UIFont) -> CGFloat {
-        let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
-        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
+        let constraintRectangle = CGSize(width: width, height: .greatestFiniteMagnitude)
+        let boundingBox = self.boundingRect(with: constraintRectangle, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
         
         return ceil(boundingBox.height)
     }
     
     func width(withConstrainedHeight height: CGFloat, font: UIFont) -> CGFloat {
-        let constraintRect = CGSize(width: .greatestFiniteMagnitude, height: height)
-        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
+        let constraintRectangle = CGSize(width: .greatestFiniteMagnitude, height: height)
+        let boundingBox = self.boundingRect(with: constraintRectangle, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
         
         return ceil(boundingBox.width)
     }

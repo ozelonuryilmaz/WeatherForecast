@@ -31,12 +31,12 @@ class OYBaseViewController: UIViewController {
             self.navigationController!.navigationBar.tintColor = UIColor.textColorOnPrimary
             self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
             
-            let titleLabel = UILabel()
-            titleLabel.text = titleName.localized()
-            titleLabel.font = UIFont.customFont(size: 16, customStyle: .Bold)
-            titleLabel.textColor = UIColor.textColorOnPrimary
-            titleLabel.sizeToFit()
-            self.navigationItem.titleView = titleLabel
+            let lblTitle = UILabel()
+            lblTitle.text = titleName.localized()
+            lblTitle.font = UIFont.customFont(size: 16, customStyle: .Bold)
+            lblTitle.textColor = UIColor.textColorOnPrimary
+            lblTitle.sizeToFit()
+            self.navigationItem.titleView = lblTitle
             self.navigationItem.leftBarButtonItem = nil
             
         }

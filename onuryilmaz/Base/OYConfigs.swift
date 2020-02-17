@@ -20,36 +20,35 @@ class OYConfigs: NSObject {
     static let applicationSupportedLanguageCodes = ["tr","en"] //You must add localize.strings files under the Resources
     
     static let applicationSupportedLanguageCodesWithNames = ["tr":"Türkçe","en":"English"] //For language selection screen RMSLanguageSelection
-
+    
 }
 
 
-// MARK: *** Application Colors
+// MARK: *** App Colors
+
 extension UIColor {
     
-    //Main Colors
+    //MARK: - Main Colors
+    
     class var primaryColor: UIColor {
-        return UIColor.init(hexString: "#EE6822")
+        return UIColor.init(hexString: "#1122822")
     }
     
     class var primaryLightColor: UIColor {
-        return UIColor.init(hexString: "#EE9A4E")
+        return UIColor.init(hexString: "#229A4E")
     }
     
     class var primaryDarkColor: UIColor {
-        return UIColor.init(hexString: "#CC6626")
+        return UIColor.init(hexString: "#336536")
     }
     
     class var secondaryColor: UIColor {
         return UIColor.init(hexString: "#FFFFFF")
     }
     
-    // Text Colors
-    class var textColorOnPrimary: UIColor {
-        return UIColor.init(hexString: "#FFFFFF")
-    }
+    //MARK: - Text Colors
     
-    class var textColorOnPrimaryDark: UIColor {
+    class var textColorOnPrimary: UIColor {
         return UIColor.init(hexString: "#FFFFFF")
     }
     
@@ -57,37 +56,22 @@ extension UIColor {
         return UIColor.init(hexString: "#FFFFFF")
     }
     
+    class var textColorOnPrimaryDark: UIColor {
+        return UIColor.init(hexString: "#FFFFFF")
+    }
+    
     class var textColorOnSecondary: UIColor {
         return UIColor.init(hexString: "#421109")
     }
     
-    //Custom Colors
-    class var customColorGreen: UIColor {
-        return UIColor.init(hexString: "#27B085")
-    }
-    
-    class var customColorBlue: UIColor {
-        return UIColor.init(hexString: "#007AFF")
-    }
-    
-    class var customColorRed: UIColor {
-        return UIColor.init(hexString: "#D9390D")
-    }
-    
-    class var customColorOrange: UIColor {
-        return UIColor.init(hexString: "#FF7900")
-    }
-    
-    class var customColorYellow: UIColor {
-        return UIColor.init(hexString: "#FFE304")
-    }
-    
-    class var customColorBlack: UIColor {
-        return UIColor.init(hexString: "#212231")
-    }
+    //MARK: - Custom Colors
     
     class var customColorGrey: UIColor {
         return UIColor.init(hexString: "#9F9FAE")
+    }
+    
+    class var customColorWhiteDarker: UIColor {
+        return UIColor.init(hexString: "#F8F9F9")
     }
     
     class var customColorLightGrey: UIColor {
@@ -98,77 +82,69 @@ extension UIColor {
         return UIColor.init(hexString: "#718181")
     }
     
-    class var customColorWhiteDarker: UIColor {
-        return UIColor.init(hexString: "#F8F9F9")
+    class var customColorBlack: UIColor {
+        return UIColor.init(hexString: "#212231")
     }
     
-    class var customColorFacebook: UIColor {
-        return UIColor.init(hexString: "#3B5AA8")
+    class var customColorBlue: UIColor {
+        return UIColor.init(hexString: "#007AFF")
     }
     
-    class var customColorGoogle: UIColor {
-        return UIColor.init(hexString: "#DB4547")
+    class var customColorRed: UIColor {
+        return UIColor.init(hexString: "#D9390D")
     }
     
-    class var customColorOrangeBack: UIColor {
-        return UIColor.init(hexString: "#fff1e6")
+    class var customColorGreen: UIColor {
+        return UIColor.init(hexString: "#27B085")
     }
     
-    class var customColorBlueOrder: UIColor {
-        return UIColor.init(hexString: "#f7ffff")
+    class var customColorOrange: UIColor {
+        return UIColor.init(hexString: "#FF7900")
     }
     
-    class var customColorBlueBack: UIColor {
-        return UIColor.init(hexString: "#a5caaa")
-    }
-    
-    class var customColorGreenOrder: UIColor {
-        return UIColor.init(hexString: "#f6ffee")
-    }
-    
-    class var customColorGreenBack: UIColor {
-        return UIColor.init(hexString: "#16c257")
+    class var customColorYellow: UIColor {
+        return UIColor.init(hexString: "#FFE304")
     }
     
     // Convert HexColor to UIColor
     convenience init(hexString: String) {
-        let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
-        var int = UInt32()
-        Scanner(string: hex).scanHexInt32(&int)
+        
+        let hexStr = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
+        var int32 = UInt32()
+        Scanner(string: hexStr).scanHexInt32(&int32)
         let a, r, g, b: UInt32
-        switch hex.count {
-        case 3: // RGB (12-bit)
-            (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
-        case 6: // RGB (24-bit)
-            (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
-        case 8: // ARGB (32-bit)
-            (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
+        switch hexStr.count {
+        case 3: // RGB * 12-bit
+            (a, r, g, b) = (255, (int32 >> 8) * 17, (int32 >> 4 & 0xF) * 17, (int32 & 0xF) * 17)
+        case 6: // RGB * 24-bit
+            (a, r, g, b) = (255, int32 >> 16, int32 >> 8 & 0xFF, int32 & 0xFF)
+        case 8: // ARGB * 32-bit
+            (a, r, g, b) = (int32 >> 24, int32 >> 16 & 0xFF, int32 >> 8 & 0xFF, int32 & 0xFF)
         default:
             (a, r, g, b) = (255, 0, 0, 0)
         }
         self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
+        
     }
     
 }
 
 
-// MARK: *** Customize Application Font
+// MARK: *** Customize App Font
 
 extension UIFont {
     
-    // Secondary Font
+    // MARK: - Secondary Font
     enum FontStyle : String {
-        
+        case Thin = "Thin"
         case Black = "Black"
-        case Bold = "Bold"
-        case ExtraBold = "ExtraBold"
-        case ExtraLight = "ExtraLight"
         case Light = "Light"
         case Medium = "Medium"
         case Regular = "Regular"
+        case Bold = "Bold"
         case Semibold = "SemiBold"
-        case Thin = "Thin"
-        
+        case ExtraBold = "ExtraBold"
+        case ExtraLight = "ExtraLight"
     }
     
     class func customFont(size : Int , customStyle : FontStyle) -> UIFont! {

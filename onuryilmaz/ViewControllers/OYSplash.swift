@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OYSplash: UIViewController {
+class OYSplash: OYBaseViewController {
     
     // MARK: *** Permission
 
