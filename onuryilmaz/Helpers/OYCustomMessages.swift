@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-// The colors of error, success, warning messages will change.
 class OYCustomMessages: UILabel {
     
     class var shared: OYCustomMessages {
@@ -22,6 +21,28 @@ class OYCustomMessages: UILabel {
     var overlayView = UIView()
     var backView = UIView()
     var lbl = UILabel()
+    
+    var actionSheet: UIAlertController!
+    
+    //OYCustomMessages.shared.alertController(self, title: "Title", message: "Message")
+    func alertController(_ viewController: UIViewController, title: String, message: String){
+        
+        self.actionSheet = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        self.actionSheet.addAction(UIAlertAction(title: "Done".localized(), style: .default, handler: {
+            action in
+            self.actionSheet.dismiss(animated: true, completion: nil)
+        }))
+        
+        viewController.present(self.actionSheet, animated: true) {
+            self.actionSheet.view.superview?.subviews.first?.isUserInteractionEnabled = true
+            self.actionSheet.view.superview?.subviews.first?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.actionSheetBackgroundTapped)))
+        }
+    }
+    
+    @objc func actionSheetBackgroundTapped(){
+        self.actionSheet.dismiss(animated: true, completion: nil)
+    }
     
     func setup(_ view: UIView, txt_msg: String){
         

@@ -24,7 +24,7 @@ class OYHomeDetail: OYBaseViewController {
     func setupViewComponents(){
         
         //MARK: *** Navigation Bar
-        setupNavigationBar(titleName: "Weather Forecast".localized())
+        setupNavigationBar(titleName: "Weather Forecast")
         
         //MARK: *** Label
         lblWeatherForecast.text = weatherForecast

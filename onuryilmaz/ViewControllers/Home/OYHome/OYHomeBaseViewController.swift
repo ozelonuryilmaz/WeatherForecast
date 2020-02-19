@@ -40,8 +40,8 @@ class OYHomeBaseViewController: OYBaseViewController {
         
         let cellNib = UINib(nibName: "OYHomeXib", bundle: nil)
         tableViewWeather.register(cellNib, forCellReuseIdentifier: "OYHomeXib")
-//        tableViewWeather.contentInset = UIEdgeInsets(top: 5, left: 0, bottom: 0, right: 0)
-//        tableViewWeather.separatorStyle = .none
+        tableViewWeather.contentInset = UIEdgeInsets(top: 5, left: 0, bottom: 0, right: 0)
+        tableViewWeather.separatorStyle = .none
         view.addSubview(tableViewWeather)
         
         //Where will it layout guide?

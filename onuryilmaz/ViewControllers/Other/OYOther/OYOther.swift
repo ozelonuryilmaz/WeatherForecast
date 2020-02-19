@@ -20,7 +20,7 @@ class OYOther: OYBaseViewController {
     func setupViewComponents(){
         
         //MARK: *** Navigation Bar
-        setupNavigationBar(titleName: "Other".localized())
+        setupNavigationBar(titleName: "Other")
         
     }
     
