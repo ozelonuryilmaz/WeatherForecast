@@ -12,18 +12,21 @@ import SwiftyJSON
 
 class OYBaseNetworkManager: NSObject {
     
-    class func get(url: String, parameters: [String : Any]?, headers:[String : String]?, success:@escaping (_ response:Data?) -> Void, failure:@escaping (_ error:Error , _ statusCode:Int) -> Void ) -> Void {
+    //MARK: *** Check Internet Connection
+    
+    class func checkInternetConnection(uiView: UIView) {
         
-        Alamofire.request(url, method:.get, parameters:parameters, encoding:JSONEncoding.default, headers:headers).validate().responseJSON{ response in
+        if let reachabilityManager = NetworkReachabilityManager() {
             
-            switch response.result {
+            reachabilityManager.startListening()
+            reachabilityManager.listener = { _ in
                 
-            case .success( _):
-                success(response.data)
-                
-            case .failure(let error):
-                let statusCode : Int = response.response?.statusCode ?? 0
-                failure(error, statusCode)
+                if !reachabilityManager.isReachable {
+                    print("Internet Available")
+                    
+                    OYCustomMessages.shared.long(uiView, txt_msg: "Please check your internet connection.".localized())
+                    
+                }
             }
         }
     }
@@ -49,40 +52,60 @@ class OYBaseNetworkManager: NSObject {
     }
     
     
-    class func delete(url: String, parameters: [String : Any]?, headers:[String : String]?, success:@escaping (_ response:Data?) -> Void, failure:@escaping (_ error:Error , _ statusCode:Int) -> Void ) -> Void {
-        
-        
-        Alamofire.request(url, method:.delete, parameters:parameters, encoding:JSONEncoding.default, headers:headers).validate().responseJSON{ response in
-            
-            switch response.result {
-                
-            case .success( _):
-                success(response.data)
-                
-            case .failure(let error):
-                let statusCode : Int = response.response?.statusCode ?? 0
-                failure(error, statusCode)
-            }
-        }
-    }
-    
-    class func put(url: String, parameters: [String : Any]?, headers:[String : String]?, success:@escaping (_ response:Data?) -> Void, failure:@escaping (_ error:Error , _ statusCode:Int) -> Void ) -> Void {
-        
-        Alamofire.request(url, method:.put, parameters:parameters, encoding:JSONEncoding.default, headers:headers).validate().responseJSON{ response in
-            
-            switch response.result {
-                
-            case .success( _):
-                success(response.data)
-                
-            case .failure(let error):
-                let statusCode : Int = response.response?.statusCode ?? 0
-                failure(error, statusCode)
-            }
-        }
-    }
-    
-    
+//    class func get(url: String, parameters: [String : Any]?, headers:[String : String]?, success:@escaping (_ response:Data?) -> Void, failure:@escaping (_ error:Error , _ statusCode:Int) -> Void ) -> Void {
+//
+//        Alamofire.request(url, method:.get, parameters:parameters, encoding:JSONEncoding.default, headers:headers).validate().responseJSON{ response in
+//
+//            print("url: ", url)
+//            print("parameters: \(JSON(parameters as Any))")
+//
+//            switch response.result {
+//                
+//            case .success( _):
+//                success(response.data)
+//
+//            case .failure(let error):
+//                let statusCode : Int = response.response?.statusCode ?? 0
+//                failure(error, statusCode)
+//            }
+//        }
+//    }
+//
+//
+//    class func delete(url: String, parameters: [String : Any]?, headers:[String : String]?, success:@escaping (_ response:Data?) -> Void, failure:@escaping (_ error:Error , _ statusCode:Int) -> Void ) -> Void {
+//
+//
+//        Alamofire.request(url, method:.delete, parameters:parameters, encoding:JSONEncoding.default, headers:headers).validate().responseJSON{ response in
+//
+//            switch response.result {
+//
+//            case .success( _):
+//                success(response.data)
+//
+//            case .failure(let error):
+//                let statusCode : Int = response.response?.statusCode ?? 0
+//                failure(error, statusCode)
+//            }
+//        }
+//    }
+//
+//    class func put(url: String, parameters: [String : Any]?, headers:[String : String]?, success:@escaping (_ response:Data?) -> Void, failure:@escaping (_ error:Error , _ statusCode:Int) -> Void ) -> Void {
+//
+//        Alamofire.request(url, method:.put, parameters:parameters, encoding:JSONEncoding.default, headers:headers).validate().responseJSON{ response in
+//
+//            switch response.result {
+//
+//            case .success( _):
+//                success(response.data)
+//
+//            case .failure(let error):
+//                let statusCode : Int = response.response?.statusCode ?? 0
+//                failure(error, statusCode)
+//            }
+//        }
+//    }
+//
+//
 //    class func uploadData(url: String, parameters: [String : AnyObject]?, headers:[String : String]?,datas: [Data], dataName: String,fileName: String, mimeType: String, fileExtension: String,success:@escaping (_ response:Data?) -> Void, failure:@escaping (_ error:Error) -> Void ) -> Void {
 //
 //        Alamofire.upload( multipartFormData: { multipartFormData in
@@ -145,23 +168,5 @@ class OYBaseNetworkManager: NSObject {
 //                }
 //        }
 //    }
-
     
-    //MARK: *** Check Internet Connection
-    class func checkInternetConnection(uiView: UIView) {
-        
-        if let reachabilityManager = NetworkReachabilityManager() {
-            
-            reachabilityManager.startListening()
-            reachabilityManager.listener = { _ in
-                
-                if !reachabilityManager.isReachable {
-                    print("Internet Available")
-                    
-                    OYCustomMessages.shared.long(uiView, txt_msg: "Please check your internet connection.".localized())
-                    
-                }
-            }
-        }
-    }
 }

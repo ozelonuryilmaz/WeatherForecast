@@ -11,6 +11,8 @@ import UIKit
 
 class OYCustomMessages: UILabel {
     
+//    static let shared = OYCustomMessages()
+    
     class var shared: OYCustomMessages {
         struct Static {
             static let instance: OYCustomMessages = OYCustomMessages()

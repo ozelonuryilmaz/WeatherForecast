@@ -26,10 +26,10 @@
 		672C325723F057FE0044E7CC /* EncodeSansCondensed-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 671DC79423EFF30D00A321E1 /* EncodeSansCondensed-ExtraBold.ttf */; };
 		672C325823F058000044E7CC /* EncodeSansCondensed-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 671DC79523EFF30D00A321E1 /* EncodeSansCondensed-ExtraLight.ttf */; };
 		672C325A23F05F310044E7CC /* OYHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C325923F05F310044E7CC /* OYHome.swift */; };
-		672C325E23F05F770044E7CC /* OYHomeXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C325C23F05F770044E7CC /* OYHomeXib.swift */; };
-		672C325F23F05F770044E7CC /* OYHomeXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 672C325D23F05F770044E7CC /* OYHomeXib.xib */; };
 		6766220423F983E800C0EF05 /* Other.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6766220323F983E800C0EF05 /* Other.storyboard */; };
 		678AC3F723F2FA15001560AC /* OYHomeBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678AC3F623F2FA15001560AC /* OYHomeBaseViewController.swift */; };
+		67B4564D23FF038400D32D83 /* OYHomeXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C325C23F05F770044E7CC /* OYHomeXib.swift */; };
+		67B4564E23FF038C00D32D83 /* OYHomeXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 672C325D23F05F770044E7CC /* OYHomeXib.xib */; };
 		67E7B4B123EF3DD30017C2E4 /* OYBaseNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E7B4B023EF3DD30017C2E4 /* OYBaseNetworkManager.swift */; };
 		67E7B4B323EF3DED0017C2E4 /* OYNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E7B4B223EF3DED0017C2E4 /* OYNetworkManager.swift */; };
 		67E7B4B523EF3E020017C2E4 /* OYModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E7B4B423EF3E020017C2E4 /* OYModels.swift */; };
@@ -158,8 +158,7 @@
 			children = (
 				672C325923F05F310044E7CC /* OYHome.swift */,
 				678AC3F623F2FA15001560AC /* OYHomeBaseViewController.swift */,
-				672C325C23F05F770044E7CC /* OYHomeXib.swift */,
-				672C325D23F05F770044E7CC /* OYHomeXib.xib */,
+				67B4564C23FF00CE00D32D83 /* OYHomeXib */,
 			);
 			path = OYHome;
 			sourceTree = "<group>";
@@ -189,6 +188,15 @@
 				67F2BF5423EF397C00672DA4 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		67B4564C23FF00CE00D32D83 /* OYHomeXib */ = {
+			isa = PBXGroup;
+			children = (
+				672C325C23F05F770044E7CC /* OYHomeXib.swift */,
+				672C325D23F05F770044E7CC /* OYHomeXib.xib */,
+			);
+			path = OYHomeXib;
 			sourceTree = "<group>";
 		};
 		67E7B4AA23EF3D1F0017C2E4 /* ViewControllers */ = {
@@ -329,6 +337,7 @@
 			files = (
 				672C325223F057EE0044E7CC /* EncodeSansCondensed-Thin.ttf in Resources */,
 				672C325323F057F00044E7CC /* EncodeSansCondensed-Black.ttf in Resources */,
+				67B4564E23FF038C00D32D83 /* OYHomeXib.xib in Resources */,
 				672C325623F057FB0044E7CC /* EncodeSansCondensed-Light.ttf in Resources */,
 				672C325723F057FE0044E7CC /* EncodeSansCondensed-ExtraBold.ttf in Resources */,
 				67F2BF5723EF399B00672DA4 /* LaunchScreen.storyboard in Resources */,
@@ -339,7 +348,6 @@
 				6766220423F983E800C0EF05 /* Other.storyboard in Resources */,
 				672C325123F057EC0044E7CC /* EncodeSansCondensed-SemiBold.ttf in Resources */,
 				672C325023F057E50044E7CC /* EncodeSansCondensed-Regular.ttf in Resources */,
-				672C325F23F05F770044E7CC /* OYHomeXib.xib in Resources */,
 				67F2BF5623EF399600672DA4 /* Main.storyboard in Resources */,
 				671A81FC23EF352600BC13DB /* Assets.xcassets in Resources */,
 				672C325823F058000044E7CC /* EncodeSansCondensed-ExtraLight.ttf in Resources */,
@@ -409,7 +417,7 @@
 				671A81F323EF351B00BC13DB /* AppDelegate.swift in Sources */,
 				67E7B4B523EF3E020017C2E4 /* OYModels.swift in Sources */,
 				671A81F523EF351B00BC13DB /* SceneDelegate.swift in Sources */,
-				672C325E23F05F770044E7CC /* OYHomeXib.swift in Sources */,
+				67B4564D23FF038400D32D83 /* OYHomeXib.swift in Sources */,
 				67E7B4B723EF3E380017C2E4 /* OYConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
