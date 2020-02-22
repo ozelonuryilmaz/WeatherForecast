@@ -13,13 +13,13 @@ class OYConfigs: NSObject {
     static let applicationDomain = "http://api.openweathermap.org"
     static let developmentDomain = "http://apitest.openweathermap.org"
     
-    static let applicationFontName = "EncodeSansCondensed" //Font files under the Resources
+    static let applicationTabBarCount = 2 // You can customize tabbar names from Localizable. Strings under the Resources
     
-    static let applicationTabBarCount = 2 //You can customize tabbar names from Localizable.strings under the Resources
+    static let applicationSupportedLanguageCodesWithNames = ["tr":"Türkçe", "en":"English"] // For language selection screen RMSLanguageSelection
     
-    static let applicationSupportedLanguageCodes = ["tr","en"] //You must add localize.strings files under the Resources
+    static let applicationSupportedLanguageCodes = ["tr", "en"] // You must add localize. Strings files under the Resources
     
-    static let applicationSupportedLanguageCodesWithNames = ["tr":"Türkçe","en":"English"] //For language selection screen RMSLanguageSelection
+    static let applicationFontName = "EncodeSansCondensed" // Font files under the Resources
     
 }
 

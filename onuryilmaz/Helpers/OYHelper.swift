@@ -18,7 +18,7 @@ class OYHelper: NSObject {
         tabBarController.tabBar.barTintColor = UIColor.secondaryColor
         
         for i in 0 ..< OYConfigs.applicationTabBarCount  {
-            let tabBarItem = UITabBarItem.init(title: "tabBarItemName\(i)".localized(), image: UIImage.init(named: "tabBarIcon\(i)"), tag: i)
+            let tabBarItem = UITabBarItem.init(title: NSLocalizedString("tabBarItemName\(i)", comment: "setupTabBarControler"), image: UIImage.init(named: "tabBarIcon\(i)"), tag: i)
             tabBarItem.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.customFont(size: 14, customStyle: .Medium)!], for: .normal)
             tabBarController.viewControllers![i].tabBarItem = tabBarItem
         }
@@ -52,7 +52,7 @@ extension UIViewController {
     }
 }
 
-// MARK: *** Shake Label
+// MARK: *** Shake label
 extension UILabel {
     func shake() {
         let anim = CABasicAnimation(keyPath: "state")
@@ -65,8 +65,9 @@ extension UILabel {
     }
 }
 
-// MARK: *** Calculate Label Height or Width String Extension
+// MARK: *** Calculate label height or width string extension
 extension String {
+    
     func height(withConstrainedWidth width: CGFloat, font: UIFont) -> CGFloat {
         let constraintRectangle = CGSize(width: width, height: .greatestFiniteMagnitude)
         let boundingBox = self.boundingRect(with: constraintRectangle, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
@@ -80,4 +81,5 @@ extension String {
         
         return ceil(boundingBox.width)
     }
+    
 }

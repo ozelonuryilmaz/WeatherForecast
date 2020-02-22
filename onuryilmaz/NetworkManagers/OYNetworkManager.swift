@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SwiftyJSON
+//import SwiftyJSON
 
 class OYNetworkManager: NSObject {
     
@@ -16,7 +16,7 @@ class OYNetworkManager: NSObject {
     class func getHeader() -> [String : String] {
         
         let token = ""
-        let header : [String:String] = ["Authorization": token , "Content-Type": "application/json"]
+        let header : [String:String] = ["Authorization": token, "Content-Type": "application/json"]
         return header
     }
     
@@ -59,6 +59,7 @@ class OYNetworkManager: NSObject {
             do {
                 let decoder = JSONDecoder()
                 theResponse = try decoder.decode(OYModels.MainModel.self, from: data!)
+                //print("response: \(JSON(data as Any))")
                 success(theResponse)
 
             } catch let error {

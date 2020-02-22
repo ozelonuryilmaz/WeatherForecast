@@ -6,10 +6,9 @@
 //  Copyright © 2020 Onur YILMAZ. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
-class OYCustomMessages: UILabel {
+class OYCustomMessages: NSObject {
     
 //    static let shared = OYCustomMessages()
     
@@ -31,7 +30,7 @@ class OYCustomMessages: UILabel {
         
         self.actionSheet = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
-        self.actionSheet.addAction(UIAlertAction(title: "Done".localized(), style: .default, handler: {
+        self.actionSheet.addAction(UIAlertAction(title: NSLocalizedString("Done", comment: ""), style: .default, handler: {
             action in
             self.actionSheet.dismiss(animated: true, completion: nil)
         }))
@@ -66,7 +65,7 @@ class OYCustomMessages: UILabel {
         lbl.numberOfLines = 0
         lbl.textColor = UIColor.white
         lbl.center = overlayView.center
-        lbl.text = txt_msg
+        lbl.text = NSLocalizedString(txt_msg, comment: "OYCustomMessages")
         lbl.textAlignment = .center
         lbl.center = CGPoint(x: overlayView.bounds.width / 2, y: overlayView.bounds.height / 2)
         overlayView.addSubview(lbl)

@@ -8,7 +8,7 @@
 
 import UIKit
 import Alamofire
-import SwiftyJSON
+//import SwiftyJSON
 
 class OYBaseNetworkManager: NSObject {
     
@@ -24,7 +24,7 @@ class OYBaseNetworkManager: NSObject {
                 if !reachabilityManager.isReachable {
                     print("Internet Available")
                     
-                    OYCustomMessages.shared.long(uiView, txt_msg: "Please check your internet connection.".localized())
+                    OYCustomMessages.shared.long(uiView, txt_msg: "Please check your internet connection.")
                     
                 }
             }
@@ -33,14 +33,15 @@ class OYBaseNetworkManager: NSObject {
     
     class func post(url: String, parameters: [String : Any]?, headers:[String : String]?, success:@escaping (_ response:Data?) -> Void, failure:@escaping (_ error:Error , _ statusCode:Int) -> Void ) -> Void {
         
-        Alamofire.request(url, method:.post, parameters:parameters, encoding:JSONEncoding.default, headers:headers).validate(statusCode: 200..<300).responseJSON(completionHandler: { response in
+        Alamofire.request(url, method:.post, parameters: parameters, encoding:JSONEncoding.default, headers:headers).validate(statusCode: 200..<300).responseJSON(completionHandler: { response in
             
-            print("url: ", url)
-            print("parameters: \(JSON(parameters as Any))")
+//            print("url: ", url)
+//            print("parameters: \(JSON(parameters as Any))")
             
             switch response.result {
                 
             case .success( _):
+                
                 success(response.data)
                 
             case .failure(let error):

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Localize_Swift
 import IQKeyboardManagerSwift
 
 @UIApplicationMain
@@ -19,18 +18,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // MARK: *** Language Setup
-        if UserDefaults.standard.string(forKey: OYConstants.UserDefaults.APP_SELECTED_LANG) != nil {
-            Localize.setCurrentLanguage(UserDefaults.standard.string(forKey: OYConstants.UserDefaults.APP_SELECTED_LANG)!)
-        }else{
-            let locale = NSLocale.current.languageCode
-            let supportedLangs = OYConfigs.applicationSupportedLanguageCodes
-
-            if supportedLangs.contains(locale ?? ""){
-                Localize.setCurrentLanguage(locale!)
-            }else{
-                Localize.setCurrentLanguage("tr")
-            }
-        }
+//        if UserDefaults.standard.string(forKey: OYConstants.UserDefaults.APP_SELECTED_LANG) != nil {
+//            Localize.setCurrentLanguage(UserDefaults.standard.string(forKey: OYConstants.UserDefaults.APP_SELECTED_LANG)!)
+//        }else{
+//            let locale = NSLocale.current.languageCode
+//            let supportedLangs = OYConfigs.applicationSupportedLanguageCodes
+//
+//            if supportedLangs.contains(locale ?? ""){
+//                Localize.setCurrentLanguage(locale!)
+//            }else{
+//                Localize.setCurrentLanguage("tr")
+//            }
+//        }
         
         // MARK: *** IQKeyboardManager
         IQKeyboardManager.shared.enable = true

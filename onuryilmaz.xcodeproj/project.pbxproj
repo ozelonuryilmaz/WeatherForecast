@@ -30,6 +30,7 @@
 		678AC3F723F2FA15001560AC /* OYHomeBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678AC3F623F2FA15001560AC /* OYHomeBaseViewController.swift */; };
 		67B4564D23FF038400D32D83 /* OYHomeXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C325C23F05F770044E7CC /* OYHomeXib.swift */; };
 		67B4564E23FF038C00D32D83 /* OYHomeXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 672C325D23F05F770044E7CC /* OYHomeXib.xib */; };
+		67C20C2C240119A400D19DC5 /* OYBlankPageWarning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C20C2B240119A400D19DC5 /* OYBlankPageWarning.swift */; };
 		67E7B4B123EF3DD30017C2E4 /* OYBaseNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E7B4B023EF3DD30017C2E4 /* OYBaseNetworkManager.swift */; };
 		67E7B4B323EF3DED0017C2E4 /* OYNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E7B4B223EF3DED0017C2E4 /* OYNetworkManager.swift */; };
 		67E7B4B523EF3E020017C2E4 /* OYModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E7B4B423EF3E020017C2E4 /* OYModels.swift */; };
@@ -71,6 +72,7 @@
 		672C325D23F05F770044E7CC /* OYHomeXib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OYHomeXib.xib; sourceTree = "<group>"; };
 		6766220323F983E800C0EF05 /* Other.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Other.storyboard; sourceTree = "<group>"; };
 		678AC3F623F2FA15001560AC /* OYHomeBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OYHomeBaseViewController.swift; sourceTree = "<group>"; };
+		67C20C2B240119A400D19DC5 /* OYBlankPageWarning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OYBlankPageWarning.swift; sourceTree = "<group>"; };
 		67E7B4B023EF3DD30017C2E4 /* OYBaseNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OYBaseNetworkManager.swift; sourceTree = "<group>"; };
 		67E7B4B223EF3DED0017C2E4 /* OYNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OYNetworkManager.swift; sourceTree = "<group>"; };
 		67E7B4B423EF3E020017C2E4 /* OYModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OYModels.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				671DC78A23EFF23B00A321E1 /* OYHelper.swift */,
+				67C20C2B240119A400D19DC5 /* OYBlankPageWarning.swift */,
 				671DC78823EFF09000A321E1 /* OYCustomMessages.swift */,
 			);
 			path = Helpers;
@@ -414,6 +417,7 @@
 				671DC78923EFF09000A321E1 /* OYCustomMessages.swift in Sources */,
 				671DC78B23EFF23B00A321E1 /* OYHelper.swift in Sources */,
 				67E7B4BB23EF3E870017C2E4 /* OYBaseViewController.swift in Sources */,
+				67C20C2C240119A400D19DC5 /* OYBlankPageWarning.swift in Sources */,
 				671A81F323EF351B00BC13DB /* AppDelegate.swift in Sources */,
 				67E7B4B523EF3E020017C2E4 /* OYModels.swift in Sources */,
 				671A81F523EF351B00BC13DB /* SceneDelegate.swift in Sources */,

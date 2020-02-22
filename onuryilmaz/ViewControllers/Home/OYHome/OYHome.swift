@@ -38,7 +38,7 @@ class OYHome: OYHomeBaseViewController {
             
             response
                 ? self.tableViewWeather.reloadData()
-                : OYCustomMessages.shared.long(self.view, txt_msg: "An error has occured.".localized())
+                : OYCustomMessages.shared.long(self.view, txt_msg: "An error has occured.")
             
         })
         

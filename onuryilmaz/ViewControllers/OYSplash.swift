@@ -21,8 +21,8 @@ class OYSplash: OYBaseViewController {
         super.viewDidAppear(animated)
         
         let theTabBarController = self.storyboard?.instantiateViewController(withIdentifier: "theTabBarController") as! UITabBarController
-        theTabBarController.modalTransitionStyle = .crossDissolve
         theTabBarController.modalPresentationStyle = .fullScreen
+        theTabBarController.modalTransitionStyle = .crossDissolve
         self.present(theTabBarController, animated: true, completion: nil)
         
         OYHelper.setupTabBarControler(tabBarController: theTabBarController)

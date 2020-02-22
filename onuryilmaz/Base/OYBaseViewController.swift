@@ -32,7 +32,7 @@ class OYBaseViewController: UIViewController {
             self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
             
             let lblTitle = UILabel()
-            lblTitle.text = titleName.localized()
+            lblTitle.text = NSLocalizedString(titleName, comment: "")
             lblTitle.font = UIFont.customFont(size: 16, customStyle: .Bold)
             lblTitle.textColor = UIColor.textColorOnPrimary
             lblTitle.sizeToFit()
