@@ -54,20 +54,28 @@ class OYCustomMessages: NSObject {
         backView.backgroundColor = white
         view.addSubview(backView)
         
-        overlayView.frame = CGRect(x: 0, y: 0, width: view.frame.width - 60  , height: 50)
-        overlayView.center = CGPoint(x: view.bounds.width / 2, y: view.bounds.height - 100)
-        overlayView.backgroundColor = UIColor.black
+        let lblFont: UIFont = UIFont.customFont(size: 18, customStyle: .Medium)
+        let width = view.frame.width - 60
+        
+        let lblHeight = txt_msg.height(withConstrainedWidth: width, font: lblFont)
+        
+        overlayView.frame = CGRect(x: 0, y: 0, width: width, height: lblHeight)
+        overlayView.center = CGPoint(x: view.bounds.width / 2, y: view.bounds.height / 2 + lblHeight)
+        overlayView.backgroundColor = UIColor.black.withAlphaComponent(0.8)
         overlayView.clipsToBounds = true
         overlayView.layer.cornerRadius = 10
         overlayView.alpha = 0
         
-        lbl.frame = CGRect(x: 0, y: 0, width: overlayView.frame.width, height: 50)
-        lbl.numberOfLines = 0
-        lbl.textColor = UIColor.white
-        lbl.center = overlayView.center
+        lbl.frame = CGRect(x: 0, y: 0, width: width, height: lblHeight)
         lbl.text = NSLocalizedString(txt_msg, comment: "OYCustomMessages")
+        lbl.textColor = UIColor.white
+        lbl.font = lblFont
         lbl.textAlignment = .center
+        lbl.numberOfLines = 0
+        lbl.sizeToFit()
+        lbl.center = overlayView.center
         lbl.center = CGPoint(x: overlayView.bounds.width / 2, y: overlayView.bounds.height / 2)
+        
         overlayView.addSubview(lbl)
         
         view.addSubview(overlayView)
