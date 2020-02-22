@@ -17,15 +17,18 @@ class OYBlankPageWarning: NSObject {
         return Static.instance
     }
     
+    let image = UIImageView()
+    let label = UILabel()
+    
     func setup(_ view: UIView, text: String, imageName: String){
         
-        let image = UIImageView()
+        //MARK: - UIImageView
         image.image = UIImage(named: imageName)
         image.contentMode = .scaleAspectFit
 //        image.frame = CGRect(x: 0, y: 0, width: view.frame.size.width / 2.5, height: view.frame.size.width / 2.5)
         view.addSubview(image)
         
-        let label = UILabel()
+        //MARK: - UILabel
         label.font = UIFont.customFont(size: 20, customStyle: .Semibold)
         label.textColor = UIColor.customColorBlack
         label.text = NSLocalizedString(text, comment: "OYBlankPageWarning")
@@ -34,15 +37,16 @@ class OYBlankPageWarning: NSObject {
         label.sizeToFit()
         view.addSubview(label)
         
-        // ImageView
+        //MARK: - ImageView Constant
         let widthAndHeightConstant = view.frame.size.width / 3
         let centerXConstant: CGFloat = -40
         
-        // Label
+        //MARK: - Label Constant
         let topConstant: CGFloat = 40
         let leadingConstant: CGFloat = 16
         let trailingConstant: CGFloat = -16
         
+        //MARK: - Constraints
         image.translatesAutoresizingMaskIntoConstraints = false
         label.translatesAutoresizingMaskIntoConstraints = false
         
@@ -62,6 +66,11 @@ class OYBlankPageWarning: NSObject {
         NSLayoutConstraint.activate(imageConstraints)
         NSLayoutConstraint.activate(labelConstraints)
         
+    }
+    
+    func remove(){
+        self.image.removeFromSuperview()
+        self.label.removeFromSuperview()
     }
 
 }
