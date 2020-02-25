@@ -9,6 +9,8 @@
 import UIKit
 
 class OYOther: OYBaseViewController {
+    
+    let blankPageWarning = OYBlankPageWarning()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +24,7 @@ class OYOther: OYBaseViewController {
         //MARK: *** Navigation Bar
         setupNavigationBar(titleName: "Other")
         
-        OYBlankPageWarning.shared.setup(self.view, text: "Blank Page", imageName: "iconSearch")
+        blankPageWarning.setup(self.view, text: "Blank Page", imageName: "iconSearch")
         
     }
     

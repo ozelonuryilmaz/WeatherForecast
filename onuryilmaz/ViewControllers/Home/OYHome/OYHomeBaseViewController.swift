@@ -30,6 +30,8 @@ class OYHomeBaseViewController: OYBaseViewController {
         
         btnSearch.setImage(UIImage(named: "iconSearch"), for: .normal)
         btnSearch.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+        btnSearch.addTarget(self, action: #selector(OYHome.tapBtnSearch), for: .touchUpInside)
+        
         let btnContainerView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
         btnContainerView.addSubview(btnSearch)
         let barButtonItem = UIBarButtonItem(customView: btnContainerView)
@@ -60,7 +62,7 @@ class OYHomeBaseViewController: OYBaseViewController {
         
     }
     
-    func getWeather(city: String, key: String, success:@escaping (_ response: Bool) -> Void) -> Void {
+    func getWeather(city: String, key: String, success:@escaping (_ response: Bool) -> Void, failure:@escaping (_ error:Error , _ statusCode:Int) -> Void) -> Void {
         
         self.showProgressView()
         
@@ -98,6 +100,7 @@ class OYHomeBaseViewController: OYBaseViewController {
             self.hideProgressView()
             
         }) { (Error, statusCode) in
+            failure(Error, statusCode)
             self.hideProgressView()
         }
 

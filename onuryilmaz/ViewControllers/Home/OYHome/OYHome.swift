@@ -9,18 +9,20 @@
 import UIKit
 
 class OYHome: OYHomeBaseViewController {
+    
+    let blankPageWarning = OYBlankPageWarning()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.setupViewComponents()
         
-        self.btnSearch.addTarget(self, action: #selector(tapBtnSearch(sender:)), for: .touchUpInside)
-        
         self.tableViewWeather.delegate = self
         self.tableViewWeather.dataSource = self
         self.tableViewWeather.rowHeight = UITableView.automaticDimension
         self.tableViewWeather.estimatedRowHeight = 300
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.refresh), name: NSNotification.Name(rawValue: String(describing: OYHome.self)), object: nil)
         
     }
     
@@ -34,20 +36,56 @@ class OYHome: OYHomeBaseViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        fetchData()
+        
+    }
+    
+    @objc func refresh() {
+        
+        blankPageWarning.remove()
+        fetchData()
+        
+    }
+    
+    func fetchData() {
+        
         self.getWeather(city: "istanbul", key: OYConstants.WEATHER_KEY, success: { (response) in
             
-            response
-                ? self.tableViewWeather.reloadData()
-                : OYCustomMessages.shared.long(self.view, txt_msg: "An error has occured.")
+//            response
+//                ? self.tableViewWeather.reloadData()
+//                : OYCustomMessages.shared.long(self.view, txt_msg: "An error has occured.")
             
-        })
+            if !self.weatherArray.isEmpty && response {
+                
+                self.tableViewWeather.isHidden = false
+                self.tableViewWeather.reloadData()
+                
+            }else if self.weatherArray.isEmpty && response{
+                
+                self.tableViewWeather.isHidden = true
+                self.blankPageWarning.setup(self.view, text: "No data found.", imageName: "iconSearch", buttonName: "Refresh", notificationName: String(describing: OYHome.self))
+                
+            }else {
+                
+                self.tableViewWeather.isHidden = true
+                self.blankPageWarning.setup(self.view, text: "An error has occured.", imageName: "iconSearch", buttonName: "Refresh", notificationName: String(describing: OYHome.self))
+                
+            }
+            
+            
+        }){ (Error, statusCode) in
+            
+            self.tableViewWeather.isHidden = true
+            self.blankPageWarning.setup(self.view, text: "An error has occured.", imageName: "iconSearch", buttonName: "Refresh", notificationName: String(describing: OYHome.self))
+            
+        }
         
     }
     
     
     // MARK: *** Button Tap Actions
     @IBAction func tapBtnSearch(sender: UIButton) {
-        
+        print("search")
     }
     
 }
